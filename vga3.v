@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 
 module VGA(
-	input	wire		clk,
+	input	wire	    clk,	// 100 MHz
 	output 	wire [ 3:0] vgaRed,
 	output 	wire [ 3:0] vgaGreen,
 	output 	wire [ 3:0] vgaBlue,
-	output 	reg			Hsync,
-	output 	reg			Vsync
+	output 	reg	    Hsync,
+	output 	reg	    Vsync
 );
 
-	reg				flip;
+	reg		flip;
 	reg	[ 1:0]	timer;
 	reg	[ 6:0]	char;
 	reg	[ 7:0]	locb;
@@ -31,10 +31,10 @@ module VGA(
 	wire	[12:0]	address;
 	wire	[31:0]	early;
 
-	assign x 		= hCount-12'd568;
-	assign y		= vCount-10'd46;
-	assign col 		= x[4:2];
-	assign row		= y[2:0];
+	assign x 	= hCount-12'd568;
+	assign y	= vCount-10'd46;
+	assign col 	= x[4:2];
+	assign row	= y[2:0];
 	assign address  = (((y[9:3]<<2)+y[9:3])<<4)+x[11:5];
 	assign vgaRed	= color[11:8];
 	assign vgaGreen = color[7:4];
@@ -98,7 +98,7 @@ module VGA(
 endmodule
 
 module locByte(
-	input		wire [31:0]	l,
+	input	wire [31:0] l,
 	input 	wire [ 1:0] s,
 	output	wire [ 7:0] b
 );
