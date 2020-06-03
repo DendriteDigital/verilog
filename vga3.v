@@ -40,7 +40,7 @@ module VGA(
 	assign vgaGreen = color[7:4];
 	assign vgaBlue 	= color[3:0];
 
-	CharSet acs(clk,temp,early);
+	CharSet acs(clk,temp,early);		// CharSet32.v
 //	Random rnd(clk,address,data);
 	locByte loc(data,row[1:0],pixels);
 
@@ -72,7 +72,7 @@ module VGA(
 				data	<= early;
 				flip	<= address[   7];
 				off	<= address[11:0];
-				on		<=~address[12:1];
+				on	<=~address[12:1];
 			end
 		end
 		if(hCount>=3177)begin
