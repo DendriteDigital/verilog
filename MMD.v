@@ -123,7 +123,7 @@ module Display(
 	reg	[ 6:0]	char;
 	reg	[11:0]	color;
 	reg	[31:0]	data;
-	reg				flip;
+	reg		flip;
 	reg	[ 7:0]	locb;
 	reg	[11:0]	off;
 	reg	[11:0]	on;
@@ -139,29 +139,29 @@ module Display(
 	wire	[12:0]	x;
 	wire	[10:0]	y;
 
-	assign x 		= hCount-HVA+12'd8;
-	assign y			= vCount-VVA;
-	assign col 		= x[2:0];
-	assign row		= y[2:0];
+	assign x 	= hCount-HVA+12'd8;
+	assign y	= vCount-VVA;
+	assign col 	= x[2:0];
+	assign row	= y[2:0];
 	assign address	= (y[9:3]<<8)+x[12:3]+13'd1;
 	assign vgaRed	= color[11:8];
-	assign vgaGreen= color[7:4];
-	assign vgaBlue = color[3:0];
+	assign vgaGreen = color[7:4];
+	assign vgaBlue  = color[3:0];
 
 	CharSet acs(clock,temp,early);
 	locByte loc(data,row[1:0],pixels);
 
 	initial begin
-		Hsync<=~POL;
-		Vsync<=~POL;
-		char<=7'd0;
-		color<=12'd0;
-		data<=32'd0;
-		hCount<=11'd0;
-		on<=12'd0;
-		off<=12'd0;
-		temp<=8'd0;
-		vCount<=10'd0;
+		Hsync	<= ~POL;
+		Vsync	<= ~POL;
+		char	<= 7'd0;
+		color	<=12'd0;
+		data	<=32'd0;
+		hCount	<=11'd0;
+		on	<=12'd0;
+		off	<=12'd0;
+		temp	<= 8'd0;
+		vCount	<=10'd0;
 	end
 	
 	always @ (posedge clock) begin
@@ -200,34 +200,13 @@ module Display(
 			data	<= early;
 			flip	<= address[7];
 			off	<= address[11:0];
-			on		<=~address[11:0];
+			on	<=~address[11:0];
 		end
 	end
 endmodule
 
-module forth(
-	input  wire i,
-	output reg  o
-);
-	reg t;
-	
-	initial begin
-		t<=1'd0;
-		o<=1'd0;
-	end
-	
-	always@(posedge i)begin
-		t<=~t;
-	end
-	
-	always@(posedge t)begin
-		o<=~o;
-	end
-	
-endmodule
-
 module locByte(
-	input		wire [31:0]	l,
+	input	wire [31:0] l,
 	input 	wire [ 1:0] s,
 	output	wire [ 7:0] b
 );
