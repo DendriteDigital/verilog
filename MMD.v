@@ -20,7 +20,7 @@
 `define vvaXGA 11'd38
 `define vwfXGA 11'd806
 
-`define polSVGA 1'd0
+`define polSVGA 1'd1
 `define hfpSVGA 11'd40
 `define hbpSVGA 11'd168
 `define hvaSVGA 11'd256
@@ -30,7 +30,7 @@
 `define vvaSVGA 11'd28
 `define vwfSVGA 11'd628
 
-`define polVGA 1'd1
+`define polVGA 1'd0
 `define hfpVGA 11'd16
 `define hbpVGA 11'd112
 `define hvaVGA 11'd160
@@ -67,7 +67,7 @@ module ALL(
 	assign Vsync    = vsync[rez];
 
 	always@(*)begin
-		if((hcount[rez]==0)&&(vcount[rez]==0))begin
+		if((hcount[rez]==1)&&(vcount[rez]==1))begin
 			rez=sw;
 		end
 	end
@@ -187,11 +187,11 @@ module Display(
 		if(hCount<HWL)
 			hCount<=hCount+10'd1;
 		else begin
-			hCount<=10'd0;
+			hCount<=10'd1;
 			if(vCount<VWF)begin
 				vCount<=vCount+10'd1;
 			end else begin
-				vCount<=10'd0;
+				vCount<=10'd1;
 			end
 		end
 		if(x[2:0]==3'd6)begin
