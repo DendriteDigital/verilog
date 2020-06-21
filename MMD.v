@@ -187,11 +187,11 @@ module Display(
 		if(hCount<HWL)
 			hCount<=hCount+10'd1;
 		else begin
-			hCount<=10'd1;
+			hCount<=10'd0;
 			if(vCount<VWF)begin
 				vCount<=vCount+10'd1;
 			end else begin
-				vCount<=10'd1;
+				vCount<=10'd0;
 			end
 		end
 		if(x[2:0]==3'd6)begin
