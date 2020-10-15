@@ -6,9 +6,9 @@
 //      Engineer: Gregory Scott Callen
 //
 //   Create Date: 19:26:19 10/06/2020
-//   Design Name: P720
-//   Module Name: E:/private/P720/TestP720.v
-//  Project Name: P720
+//   Design Name: P1080
+//   Module Name: E:/private/P1080/P1080.v
+//  Project Name: P1080
 // Target Device: Nexys 4 (Limited Edition) Artix 7 100T
 // Tool versions: Vivado 2019.2
 //
