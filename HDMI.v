@@ -1,23 +1,5 @@
 `timescale 1ns / 1ps
 
-//////////////////////////////////////////////////////////////////////////////////
-//
-//  Company: Dendrite Digital
-// Engineer: Gregory S. Callen
-//
-//    Create Date: 09/11/2021 06:24:39 PM
-//    Design Name: Dual Port RAM Memory Unit
-//    Module Name: DPRAM
-//   Project Name: Virtue Data Processor
-// Target Devices: Artix 7 200T
-//  Tool Versions: Vivado 2020.2
-//
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-//
-//////////////////////////////////////////////////////////////////////////////////
-
 // Copyright (c) 2021 by Gregory S. Callen
 // All Rights Reserved.
 
