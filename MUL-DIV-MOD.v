@@ -8,10 +8,10 @@
 // Migration from JavaScript to Verilog.
 
 module mul (
-   input wire       t,
-   input wire [9:0] a,
-   input wire [9:0] b,
-   output reg [9:0] p
+   input wire        t,
+   input wire [19:0] a,
+   input wire [19:0] b,
+   output reg [19:0] p
 );
 
    // p = a * b
@@ -182,11 +182,11 @@ endmodule    // 72897 = 517 * 141
 // All Rights Reserved.
 
 module div (
-   input wire       t,
-   input wire [9:0] a,
-   input wire [9:0] b,
-   output reg [9:0] n,
-   output reg [9:0] r
+   input wire        t,
+   input wire [19:0] a,
+   input wire [19:0] b,
+   output reg [19:0] n,
+   output reg [19:0] r
 );
 
    initial begin
