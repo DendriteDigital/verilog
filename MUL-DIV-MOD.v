@@ -198,7 +198,7 @@ module div (
 
       r = a; n = 20'd0; 
 
-      if (( b << 9n ) <= r ) begin
+      if (( b << 9 ) <= r ) begin
          n = n | 20'd512;
          r = b [ 9 ] ? r - ( 20'd1 << 18 ) : r ;
          r = b [ 8 ] ? r - ( 20'd1 << 17 ) : r ;
@@ -216,7 +216,7 @@ module div (
 // Copyright © 2022 by Gregory Scott Callen
 // All Rights Reserved.
 
-      if (( b << 8n ) <= r ) begin
+      if (( b << 8 ) <= r ) begin
          n = n | 20'd256;
          r = b [ 9 ] ? r - ( 20'd1 << 17 ) : r ;
          r = b [ 8 ] ? r - ( 20'd1 << 16 ) : r ;
@@ -234,7 +234,7 @@ module div (
 // Copyright © 2022 by Gregory Scott Callen
 // All Rights Reserved.
 
-      if (( b << 7n ) <= r ) begin
+      if (( b << 7 ) <= r ) begin
          n = n | 20'd128;
          r = b [ 9 ] ? r - ( 20'd1 << 16 ) : r ;
          r = b [ 8 ] ? r - ( 20'd1 << 15 ) : r ;
@@ -252,7 +252,7 @@ module div (
 // Copyright © 2022 by Gregory Scott Callen
 // All Rights Reserved.
 
-      if (( b << 6n ) <= r ) begin
+      if (( b << 6 ) <= r ) begin
          n = n | 20'd64;
          r = b [ 9 ] ? r - ( 20'd1 << 15 ) : r ;
          r = b [ 8 ] ? r - ( 20'd1 << 14 ) : r ;
@@ -270,7 +270,7 @@ module div (
 // Copyright © 2022 by Gregory Scott Callen
 // All Rights Reserved.
 
-      if (( b << 5n ) <= r ) begin
+      if (( b << 5 ) <= r ) begin
          n = n | 20'd32;
          r = b [ 9 ] ? r - ( 20'd1 << 14 ) : r ;
          r = b [ 8 ] ? r - ( 20'd1 << 13 ) : r ;
@@ -288,7 +288,7 @@ module div (
 // Copyright © 2022 by Gregory Scott Callen
 // All Rights Reserved.
 
-      if (( b << 4n ) <= r ) begin
+      if (( b << 4 ) <= r ) begin
          n = n | 20'd16;
          r = b [ 9 ] ? r - ( 20'd1 << 13 ) : r ;
          r = b [ 8 ] ? r - ( 20'd1 << 12 ) : r ;
@@ -306,7 +306,7 @@ module div (
 // Copyright © 2022 by Gregory Scott Callen
 // All Rights Reserved.
 
-      if (( b << 3n ) <= r ) begin
+      if (( b << 3 ) <= r ) begin
          n = n | 20'd8;
          r = b [ 9 ] ? r - ( 20'd1 << 12 ) : r ;
          r = b [ 8 ] ? r - ( 20'd1 << 11 ) : r ;
@@ -324,7 +324,7 @@ module div (
 // Copyright © 2022 by Gregory Scott Callen
 // All Rights Reserved.
 
-      if (( b << 2n ) <= r ) begin
+      if (( b << 2 ) <= r ) begin
          n = n | 20'd4;
          r = b [ 9 ] ? r - ( 20'd1 << 11 ) : r ;
          r = b [ 8 ] ? r - ( 20'd1 << 10 ) : r ;
@@ -342,7 +342,7 @@ module div (
 // Copyright © 2022 by Gregory Scott Callen
 // All Rights Reserved.
 
-      if (( b << 1n ) <= r ) begin
+      if (( b << 1 ) <= r ) begin
          n = n | 20'd2;
          r = b [ 9 ] ? r - ( 20'd1 << 10 ) : r ;
          r = b [ 8 ] ? r - ( 20'd1 << 9 ) : r ;
@@ -360,7 +360,7 @@ module div (
 // Copyright © 2022 by Gregory Scott Callen
 // All Rights Reserved.
 
-      if (( b << 0n ) <= r ) begin
+      if (( b << 0 ) <= r ) begin
          n = n | 20'd1;
          r = b [ 9 ] ? r - ( 20'd1 << 9 ) : r ;
          r = b [ 8 ] ? r - ( 20'd1 << 8 ) : r ;
